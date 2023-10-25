@@ -15,8 +15,7 @@ const createAlunos = require("./routes/Aluno");
 app.use("/aluno", createAlunos);
 
 db.sequelize.sync().then(() => {
-    app.listen(3001, () => {
-        console.log("server rodando na porta 3001")
+    app.listen(6202, () => {
+        console.log("server rodando na porta 6202")
     })
 })
-
