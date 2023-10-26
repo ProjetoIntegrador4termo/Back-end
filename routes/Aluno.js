@@ -56,25 +56,7 @@ router.get("/alunos", async (req, res) => {
     }
 });
 
-module.exports = router;
-
-
-
-router.get("/alunosByID", validateToken, async (req, res) => {
-    try {
-        const userId = req.user.id;
-
-        const alunos = await Alunos.findAll({
-            where: { UserId: userId },
-        });
-
-        res.json({ alunos });
-    } catch (error) {
-        console.error("Erro ao buscar os alunos do usuário logado:", error);
-        res.status(500).json({ message: "Erro ao buscar os alunos" });
-    }
-});
-
+  
 module.exports = router;
 
 

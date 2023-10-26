@@ -14,6 +14,6 @@ const validateToken = (req, res, next) => {
   } catch (err) {
     return res.json({ error: err });
   }
-};
+}; 
 
 module.exports = { validateToken };

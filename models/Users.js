@@ -8,6 +8,15 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        cpf: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true, 
+        },
+        tipo: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
     });
     Users.associate = (models) => {
         Users.hasMany(models.Alunos, {
