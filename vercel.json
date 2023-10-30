@@ -3,16 +3,12 @@
     "builds": [
         {
             "src": "index.js",
-            "use": "@vercel/node",
-            "config": {
-                "node_version": "18",
-                "npmRunBuild": "install && npm start"
-            }
+            "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "(.*)",
+            "src": "/.*",
             "dest": "index.js"
         }
     ]
