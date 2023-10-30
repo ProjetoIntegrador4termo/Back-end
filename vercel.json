@@ -5,8 +5,8 @@
             "src": "index.js",
             "use": "@vercel/node",
             "config": {
-                "node_version": "16",
-                "npmRunBuild": "npm install && npm start"
+                "node_version": "18",
+                "npmRunBuild": "install && npm start"
             }
         }
     ],
