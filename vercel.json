@@ -1,15 +1,26 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "index.js",
-            "use": "@vercel/node"
-        }
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-        {
-            "src": "(.*)",
-            "dest": "index.js"
-        }
-    ]
-}
+      {
+        "src": "(.*)",
+        "dest": "index.js"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production", 
+      "DATABASE_USERNAME": "root",
+      "DATABASE_PASSWORD": "dnamGTCqCEZXatWz7hqP",
+      "DATABASE_NAME": "railway",
+      "DATABASE_HOST": "containers-us-west-69.railway.app",
+      "DATABASE_PORT": "6202",
+      "DATABASE_DIALECT": "mysql",
+      "DATABASE_PROTOCOL": "TCP"
+    }
+  }
+  
